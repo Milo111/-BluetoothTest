@@ -57,7 +57,6 @@ public class BluetoothController {
      * 关闭蓝牙
      */
     public void turnOffBluetooth() {
-<<<<<<< HEAD
         if (mBluetoothAdapter != null && mBluetoothAdapter.isEnabled()) {
             mBluetoothAdapter.disable();
         }
@@ -70,9 +69,5 @@ public class BluetoothController {
         if (mBluetoothAdapter != null && mBluetoothAdapter.isEnabled()) {
             mBluetoothAdapter.startDiscovery();
         }
-=======
-        if (mBluetoothAdapter != null && mBluetoothAdapter.isEnabled())
-            mBluetoothAdapter.disable();
->>>>>>> 3d57662048ab5612624d8d1a89b9d10406a6ca03
     }
 }
