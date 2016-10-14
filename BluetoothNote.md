@@ -27,8 +27,8 @@
 
 ### 清单文件的权限
 
-> <uses-permissionandroid:name="android.permission.BLUETOOTH_ADMIN" />
-> <uses-permissionandroid:name="android.permission.BLUETOOTH" />
+1. <uses-permissionandroid:name="android.permission.BLUETOOTH_ADMIN" />
+2. <uses-permissionandroid:name="android.permission.BLUETOOTH" />
 
 ### 代码分布
 
@@ -60,6 +60,7 @@
 ### 常用类和名词解释
 
 > \packages\apps\Settings\src\com\android\settings\bluetooth
+
 1. BluetoothEnabler.java---------界面上蓝牙开启、关闭的开关就是它了， 
 2. BluetoothSettings.java--------主界面，用于管理配对和连接设备
 3. LocalBluetoothManager.java----提供了蓝牙API上的简单调用接口，这里只是开始。
@@ -67,9 +68,11 @@
 5. BluetoothPairingDialog.java---那个配对提示的对话框
 
 >  /packages/apps/Phone/src/com/android/phone/
+
 1. BluetoothPhoneService.java----在phone的目录肯定和电话相关了，蓝牙接听挂断电话会用到这个
 
 > /packages/apps/Bluetooth/src/com/android/bluetooth/btservice/
+
 1. AdapterService.java-----------(4.2后才有的代码)蓝牙打开、关闭、扫描、配对都会走到这里，其实更准确的说它替代了4.1之前的BluetoothService.java，原来的工作
 ---------------------------------就由这个类来完成了。说到这里不能不说4.2蓝牙的目录变了，在4.1及以前的代码中packages层的代码只有opp协议相关应用的代码，也就
 ---------------------------------是文件传输那部分，而4.2的代码应用层的代码则丰富了许多，按具体的蓝牙应用协议来区别，分为以下文件夹（这里一并对蓝牙一些名词作
